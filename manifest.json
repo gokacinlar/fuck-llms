@@ -1,0 +1,25 @@
+{
+    "name": "Fuck LLMs!",
+    "description": "Are you fed up w/ppl trying to sound smart? Slopping el-el-em everywhere? Well, this extension changes every word that is LLM to AI, as the way it should be called!",
+    "manifest_version": 3,
+    "version": "1.0",
+    "icons": {
+        "48": "assets/img/no.webp"
+    },
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "src/app.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
